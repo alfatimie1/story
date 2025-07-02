@@ -5,7 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>بوابة القصص</title>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      font-family: 'Tajawal', sans-serif !important;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f9f7f3;
+      color: #2e2e2e;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+      background: linear-gradient(to left, #5b4533, #3b2f2f);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #e0d6c9;
+    }
+
+    .intro {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      line-height: 2em;
+      font-size: 1.2em;
+    }
+
+    .intro strong {
+      display: block;
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: #3b2f2f;
+      font-weight: 700;
+    }
+
+    .story-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .story-card {
+      width: 220px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: not-allowed;
+    }
+
+    .story-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .story-card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .story-image-container {
+      position: relative;
+      width: 100%;
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .story-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .story-title {
+      background-color: #ffffff;
+      padding: 12px;
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #3b2f2f;
+      border-top: 1px solid #eee;
+    }
+
+    footer {
+      background-color: #3b2f2f;
+      color: #dcd2c2;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+
+    .ash-background::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(rgba(55, 55, 55, 0.2) 1px, transparent 0);
+      background-size: 4px 4px;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @media (max-width: 600px) {
+      .story-card {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="ash-background"></div>
@@ -23,13 +157,19 @@
     <p>
       كل حكاية هي مفتاح لباب، وكل خيار قد يفتح طريقاً أو يُغلقه…
     </p>
-    <strong>✦  انتظرونا قريباً في قصص تفاعلية! تمثل طرايف الحكم ✦</strong>
+    <strong>✦ انتظرونا قريباً في قصص تفاعلية! تمثل طرايف الحكم ✦</strong>
   </section>
 
-  <div class="coming-soon">
-    ✦ قريباً ✦<br>
-    بوابة القصص ستنطلق قريباً بأذن الزهراء.
-  </div>
+  <section class="story-grid">
+    <div class="story-card">
+      <a href="#" onclick="event.preventDefault();" title="قريباً">
+        <div class="story-image-container">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0t8Ang6I35AAZNI9aL2Ex-wTEeVLgTAC_iWapUJ3qeEew2GwRHNgw0pQ_kAXalKkGK3XnV5UTWkXpYc2jCIT8VCX2nco1THlmXSIyrSv_B1X5gHkr6ktIhLKxfrUco_71JLipPKlhPQrQlEVs1c_B-6IWwLukKF-YC2WdyejnoSWvrNC8MP4HOQH8wT2_/s2560/1000067438.webp" alt="غلاف ذاكرة الحديقة" class="story-image">
+        </div>
+        <div class="story-title">ذاكرة الحديقة</div>
+      </a>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 موقع الوديعة - جميع الحقوق محفوظة
